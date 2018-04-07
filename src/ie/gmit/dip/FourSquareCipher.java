@@ -2,6 +2,13 @@ package ie.gmit.dip;
 
 public class FourSquareCipher {
 
+    public char[][] square1 = new char[5][5];
+    public char[][] square2 = new char[5][5];
+    public char[][] square3 = new char[5][5];
+    public char[][] square4 = new char[5][5];
+
+    public String[] keys = new String[2];
+
 
     public FourSquareCipher() {
         String key1 = "GEOMETRY";
@@ -121,29 +128,6 @@ public class FourSquareCipher {
             Pair<Integer> p = new Pair<Integer>((pos - 1) / 5, (pos - 1) % 5);
             return p;
         }
-    }
-
-    /*
-     * Decode the cipher text.
-     */
-    public String decode(String cipher) {
-        return null;
-    }
-
-
-    private ArrayList<String> keys = new ArrayList<String>();
-
-    public char[][] square1 = new char[5][5];
-    public char[][] square2 = new char[5][5];
-    public char[][] square3 = new char[5][5];
-    public char[][] square4 = new char[5][5];
-
-    public boolean need_key = true; //need to generate a string key
-
-    public static int key_num = 2;
-
-    public int process_id() {
-        return 2;
     }
 
 
