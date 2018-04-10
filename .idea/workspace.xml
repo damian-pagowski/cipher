@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3bda3256-5134-4022-846f-329607c5281a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/four_square_cipher/ie/gmit/dip/FourSquareCipher.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/four_square_cipher/ie/gmit/dip/FourSquareCipher.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/four_square_cipher/ie/gmit/dip/Runner.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/four_square_cipher/ie/gmit/dip/Runner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ie/gmit/dip/FileUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ie/gmit/dip/FileUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ie/gmit/dip/FourSquareCipher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ie/gmit/dip/FourSquareCipher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ie/gmit/dip/Main.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ie/gmit/dip/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ie/gmit/dip/Runner.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -49,8 +43,8 @@
       <file leaf-file-name="Runner.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ie/gmit/dip/Runner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="27" column="41" lean-forward="true" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
+            <state relative-caret-position="352">
+              <caret line="118" column="21" lean-forward="true" selection-start-line="118" selection-start-column="21" selection-end-line="118" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -139,7 +133,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.FourSquareCipher">
+  <component name="RunManager" selected="Application.Runner">
     <configuration name="FileUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ie.gmit.dip.FileUtil" />
       <module name="four_square_cipher" />
@@ -221,8 +215,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.FourSquareCipher" />
         <item itemvalue="Application.Runner" />
+        <item itemvalue="Application.FourSquareCipher" />
         <item itemvalue="Application.FileUtil" />
       </list>
     </recent_temporary>
@@ -253,11 +247,11 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32869378" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32869378" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32976446" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32976446" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -292,7 +286,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ie/gmit/dip/Runner.java</url>
-          <line>91</line>
+          <line>92</line>
           <properties />
           <option name="timeStamp" value="11" />
         </line-breakpoint>
@@ -408,8 +402,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ie/gmit/dip/Runner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="27" column="41" lean-forward="true" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
+        <state relative-caret-position="352">
+          <caret line="118" column="21" lean-forward="true" selection-start-line="118" selection-start-column="21" selection-end-line="118" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

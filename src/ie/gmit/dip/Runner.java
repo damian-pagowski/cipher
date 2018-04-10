@@ -26,6 +26,7 @@ public class Runner {
                     cipher = new FourSquareCipher();
                     cipher.initKeysWithGeneratedValues();
                     printKeysSet(cipher);
+                    break;
                 case 3:
                     cipher = new FourSquareCipher();
                     printKeysSet(cipher);
@@ -111,7 +112,7 @@ public class Runner {
                 System.out.println("Invalid input, please try again");
                 displayMainMenu(prompt);
             } else {
-                System.out.println("Selected: " + value);
+                System.out.println("Selected:" + value);
                 break;
             }
         }
