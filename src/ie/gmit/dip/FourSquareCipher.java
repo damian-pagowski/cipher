@@ -1,14 +1,17 @@
 package ie.gmit.dip;
 
+import java.util.Random;
+
 public class FourSquareCipher {
 
-    public char[][] topLeftSquare = new char[5][5];
-    public char[][] topRightSquare = new char[5][5]; // Top Right Quadrant
-    public char[][] bottomLeftSquare = new char[5][5]; // Bottom Left Quadrant:
-    public char[][] bottomRightSquare = new char[5][5];
-    public final String ALPHABET = "ABCDEFGHIKLMNOPQRSTUVWXYZ";
-    public String key1;
-    public String key2;
+    private char[][] topLeftSquare = new char[5][5];
+    private char[][] topRightSquare = new char[5][5]; // Top Right Quadrant
+    private char[][] bottomLeftSquare = new char[5][5]; // Bottom Left Quadrant:
+    private char[][] bottomRightSquare = new char[5][5];
+    private final String ALPHABET = "ABCDEFGHIKLMNOPQRSTUVWXYZ";
+    private String key1;
+    private String key2;
+
 
     public FourSquareCipher() {
         this("ZGPTFOIHMUWDRCNYKEQAXVSBL", "MFNBDCRHSAXYOGVITUEWLQZKP");
@@ -21,6 +24,45 @@ public class FourSquareCipher {
         this.topRightSquare = buildSquare(key1); // UPPER RIGHT
         this.bottomLeftSquare = buildSquare(key2); // LOWER LEFT
         this.bottomRightSquare = buildSquare(ALPHABET); // LOWER RIGHT
+    }
+
+    public String getKey1() {
+        return key1;
+    }
+
+    public String getKey2() {
+        return key2;
+    }
+
+    public void initKeysWithGeneratedValues() {
+        key1 = generateKey();
+        key2 = generateKey();
+    }
+
+    /*
+    generates randomized string that can be used as key.
+     */
+    private String generateKey() {
+        Random rand = new Random();
+        char[] chars = ALPHABET.toCharArray();
+        char[] charsRandom = new char[chars.length];
+        copyArray(chars, charsRandom);
+        int swapCount = 10;
+        while (swapCount >= 0) {
+            int i = rand.nextInt(chars.length);
+            int j = rand.nextInt(chars.length);
+            char tmp = charsRandom[i];
+            charsRandom[i] = charsRandom[j];
+            charsRandom[j] = tmp;
+            swapCount--;
+        }
+        return String.copyValueOf(charsRandom);
+    }
+
+    private void copyArray(char[] from, char[] to) {
+        for (int i = 0; i < from.length; i++) {
+            to[i] = from[i];
+        }
     }
 
     private char[][] buildSquare(String key) {

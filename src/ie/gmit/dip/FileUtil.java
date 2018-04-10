@@ -8,7 +8,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 /*
-Utility class - read/write to file
+Utility class - used to read from and write to file.
  */
 public class FileUtil {
 
