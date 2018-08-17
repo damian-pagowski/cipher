@@ -1,23 +1,26 @@
 package ie.gmit.dip;
 
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.io.*;
 
 /*
 Utility class - used to read from and write to file.
  */
 public class FileUtil {
 
-
     /*
     reads file, returns content as string.
      */
     public String readFile(String pathToFile) throws IOException {
-        return new String(Files.readAllBytes(Paths.get(pathToFile)));
+        FileInputStream fstream = new FileInputStream(pathToFile);
+        BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
+        StringBuffer content = new StringBuffer();
+        String line;
+        while ((line = br.readLine()) != null) {
+            String cleanedLine = line.replaceAll("[^A-Za-z]", "").toUpperCase();
+            content.append(cleanedLine);
+        }
+        return content.toString();
     }
 
     /*

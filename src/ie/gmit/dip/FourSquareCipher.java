@@ -12,7 +12,9 @@ public class FourSquareCipher {
     private String key1;
     private String key2;
 
-
+    /*
+    default keys, great for testing
+     */
     public FourSquareCipher() {
         this("ZGPTFOIHMUWDRCNYKEQAXVSBL", "MFNBDCRHSAXYOGVITUEWLQZKP");
     }
@@ -59,12 +61,18 @@ public class FourSquareCipher {
         return String.copyValueOf(charsRandom);
     }
 
+    /*
+    helper function to copy array
+     */
     private void copyArray(char[] from, char[] to) {
         for (int i = 0; i < from.length; i++) {
             to[i] = from[i];
         }
     }
 
+    /*
+    builds 2D array called here - square - using key (that is passed by user)
+     */
     private char[][] buildSquare(String key) {
         char[][] square = new char[5][5];
         int idx = 0;
@@ -77,22 +85,46 @@ public class FourSquareCipher {
         return square;
     }
 
+    /*
+    encrypts text passed as param
+     */
     public String encrypt(String text) {
+        text = addExtraCharIfLengthNotEven(text);
         StringBuffer sb = new StringBuffer();
-        for (int i = 0; i < text.length(); i += 2) {
-            sb.append(encryptBigram(text.substring(i, i + 2)));
+        for (int i = 0; i <= text.length() - 2; i += 2) {
+            String biagram = text.substring(i, i + 2);
+            sb.append(encryptBigram(biagram));
         }
         return sb.toString();
     }
 
+    /*
+    appending X to text if length is not even
+     */
+    private String addExtraCharIfLengthNotEven(String text) {
+        if (text.length() / 2 != 0) {
+            text += "X";
+        }
+        return text;
+    }
+
+    /*
+    decrypt text by splitting it into biagrams, then encode each and appents to StringBuffer object.
+    If number of characters is not even - calls method addExtraCharIfLengthNotEven that appends X to text.
+     */
     public String decrypt(String text) {
+        text = addExtraCharIfLengthNotEven(text);
         StringBuffer sb = new StringBuffer();
-        for (int i = 0; i < text.length(); i += 2) {
-            sb.append(decryptBigram(text.substring(i, i + 2)));
+        for (int i = 0; i <= text.length() - 2; i += 2) {
+            String biagram = text.substring(i, i + 2);
+            sb.append(decryptBigram(biagram));
         }
         return sb.toString();
     }
 
+    /*
+    encrypt biagram
+     */
     private String encryptBigram(String s) {
         int[] position1 = findPosition(s.charAt(0), topLeftSquare);
         int[] position2 = findPosition(s.charAt(1), bottomRightSquare);
@@ -101,6 +133,9 @@ public class FourSquareCipher {
         return "" + encodedChar1 + encodedChar2;
     }
 
+    /*
+    decrypt biagram
+     */
     private String decryptBigram(String s) {
         int[] position1 = findPosition(s.charAt(0), topRightSquare);
         int[] position2 = findPosition(s.charAt(1), bottomLeftSquare);
@@ -109,6 +144,9 @@ public class FourSquareCipher {
         return "" + encodedChar1 + encodedChar2;
     }
 
+    /*
+    find position (number of row and column) of character in square (2D array)
+     */
     public int[] findPosition(char c, char[][] square) {
         int[] pos = new int[2];
         for (int i = 0; i < 5; i++) {
@@ -121,5 +159,4 @@ public class FourSquareCipher {
         }
         return pos;
     }
-
 }
