@@ -22,7 +22,7 @@ public class Runner {
         while (choice != 0) {
             switch (choice) {
                 case 1:
-                    runner.initKeywords();
+                    runner.getKeywordsFromUser();
                     cipher = new FourSquareCipher(runner.key1, runner.key2);
                     break;
                 case 2:
@@ -122,7 +122,7 @@ public class Runner {
     }
 
     /*helper function that initializes fields with keywords */
-    private void initKeywords() {
+    private void getKeywordsFromUser() {
         this.key1 = getKeysFromUser("Insert first key (25 unique letters combination) and hit enter");
         this.key2 = getKeysFromUser("Insert second key (25 unique letters combination) and hit enter");
     }
